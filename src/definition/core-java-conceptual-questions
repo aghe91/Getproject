@@ -25,27 +25,100 @@ A.
 
 Explain the entire java life cycle.
 what is class?
+is a blueprint or template for creating objects that define a set of attributes (data) and methods (functions) that the objects can use.
 What is object?
+an object is an instance of a class. It is created using the new keyword followed by the name of the class and the constructor arguments (if any).
 What is the entry point of an application?
-Why main is static?
+The entry point of a Java application is the main() method, which is a special method that serves as the starting point of the program
+why main is static?
+The main() method is declared as static in Java because it is called by the JVM before any objects are created for the class.
 Which class is the superclass of all classes?
+In Java, the Object class is the superclass of all classes.
+
 What is difference between path and classpath variables?
+In Java, both the path and classpath variables are used to specify the locations of files and directories that the JVM needs to access.
+
+
 What is the difference between an Interface and Abstract class?
+An abstract class allows you to create functionality that subclasses can implement or override. An interface only allows you to define functionality, not implement it.
+
+
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+You cannot create an object of an interface or an abstract class directly, as they are incomplete by themselves.
+For interfaces, you can only create objects of classes that implement the interface
+For abstract classes, you can only create objects of concrete subclasses that extend the abstract class.
+
 what is Access Specifier?
+In Java, an access specifier is a keyword that determines the visibility or accessibility of a class, method, or field to other parts of the program. There are four access specifiers in Java
+public,private,default,protected
+
 What is OOP ? Define each feature of java OOP.
+OOps in java is to improve code readability and reusability by defining a Java program efficiently. The main principles of object-oriented programming are abstraction, encapsulation, inheritance, and polymorphism
+Encapsulation: The process of grouping related data and code into a single unit called a "class" is known as encapsulation
+Inheritance: The ability of a class to inherit properties and methods from a parent class is known as inheritance.
+Polymorphism: The ability of an object to take on different forms is known as polymorphism
+Abstraction: The process of defining a class in terms of its behavior rather than its implementation details is known as abstraction
+
 What is Java Package and which package is imported by default?
+In Java, a package is a collection of related classes, interfaces, and sub-packages. It provides a way to organize and group related classes, and helps to avoid naming conflicts. A package can contain other packages, as well as individual classes and interfaces.
+
+Java provides a default package called the "unnamed package", which is used when no package is specified. However, it is generally considered a good practice to use named packages in order to avoid naming conflicts and to provide a clear organizational structure to the code.
+
+
 What is API? Name list of API that you have used so far.
+API stands for Application Programming Interface. It is a set of predefined rules, protocols, and tools for building software applications. APIs define how software components should interact with each other, and provide developers with a way to integrate their software with other applications or services
+java APi,google maps API,Amazon,Paypal,facebook,Twiter,Twilio
+
 Does java support multiple inheritance, explain why or why not?
+Java does not support multiple inheritance, at least not in the traditional sense. Multiple inheritance is the ability of a class to inherit from multiple classes at the same time, which can result in problems like the diamond problem. In Java, this is not allowed.
+The main reason Java does not support traditional multiple inheritance is to avoid the diamond problem, which occurs when a subclass inherits from two classes that both inherit from the same superclass.
+
 What is method overloading and when it happens?
-Explain exceptions in java and how to handle it.
+Method overloading is a feature in object-oriented programming where multiple methods can have the same name but different parameters. When a method is overloaded, it means that there are multiple versions of the method with the same name, but each version takes different types or numbers of parameters.
+
+explain exceptions in java and how to handle it?
+n Java, an exception is an event that occurs during the execution of a program that disrupts the normal flow of the program's instructions. When an exception is thrown, it generates an object that contains information about the error, such as the type of exception and the location in the code where the exception occurred.
+
+Java provides a mechanism for handling exceptions with try-catch blocks. A try block is used to enclose the code that might throw an exception, while a catch block is used to handle the exception that was thrown.
+
+
 What is static keyword in java? How it has been used in variables and methods ?
+In Java, the "static" keyword is used to define a class-level variable or method. This means that the variable or method belongs to the class itself, rather than to a specific instance of the class.
+
+Static Variables:
+
+A static variable, also known as a class variable, is a variable that is shared by all instances of a class. It is declared with the "static" keyword and can be accessed using the class name instead of an object reference.
+
 What is final and how it has been used variables and methods?
+n Java, the "final" keyword is used to define a variable or method that cannot be modified or overridden, respectively. Once a variable or method is declared as final, its value or behavior cannot be changed.
+
+Final Variables:
+
+A final variable is a constant that cannot be changed once it has been assigned a value. It is declared with the "final" keyword and can be assigned a value either at the time of declaration or in a constructor.
+inal Methods:
+
+A final method is a method that cannot be overridden by a subclass. It is declared with the "final" keyword and is useful when a method in a superclass should not be changed by any subclasses.
+
 What is final, finally and finalize?
+"final": As explained in the previous answer, "final" is used to define a variable or method that cannot be modified or overridden, respectively.
+
+"finally": "finally" is a keyword that is used in a try-catch-finally block. The code inside the "finally" block is executed regardless of whether an exception is thrown or not. This is useful for releasing resources, closing files, or cleaning up after an operation.
+finalize": "finalize" is a method that is called by the garbage collector when an object is about to be destroyed. This method can be overridden by a class to perform any cleanup operations before the object is garbage collected
+
 What is a constructor ?
+In Java, a constructor is a special method that is called when an object is created. It is used to initialize the instance variables of an object and set its initial state. The constructor has the same name as the class and no return type.
+
 Can we have multiple constructors in a class?
+es, in Java, a class can have multiple constructors. Having multiple constructors allows objects to be created with different sets of initial values or arguments.
+
 If we don't have a constructor declared, what is called during the object creation?
+If a constructor is not declared explicitly in a Java class, the compiler automatically provides a default constructor with no arguments.
+
 What is "this" keyword in java ?
+In Java, "this" is a keyword that refers to the current object, i.e., the object on which the method or constructor is being called.
+
+The "this" keyword is often used in constructors to refer to the current object being initialized. It is used to distinguish the instance variables from the parameters or local variables with the same name
+
 What is "super" keyword in java? How many possible way can you use?
 What is JVM stand for ?
 Is JVM platform independent?
