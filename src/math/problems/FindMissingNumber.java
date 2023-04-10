@@ -10,5 +10,21 @@ public class FindMissingNumber {
          */
          int [] array = new int[]{10, 2, 1, 4, 5, 3, 7, 8, 6};
 
+        int missingNumber = findMissingNumber(array, 10);
+        System.out.println("The missing number is: " + missingNumber);
+    }
+
+    public static int findMissingNumber(int[] array, int n) {
+        int expectedSum = n * (n + 1) / 2;
+        int actualSum = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            actualSum += array[i];
+        }
+
+        return expectedSum - actualSum;
     }
 }
+
+
+
