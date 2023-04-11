@@ -18,6 +18,8 @@ public static void main(String[] args) {
         map.put(5, "San Jose");
         map.put(6, "Seattle");
 
+        Collection<String> values = map.values();
+        System.out.println("Values present in the map: " + values);
 
 
     }
